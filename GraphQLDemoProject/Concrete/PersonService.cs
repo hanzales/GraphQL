@@ -24,7 +24,7 @@ namespace GraphQLDemoProject.Concrete
                 {
                     Id = Guid.NewGuid(),
                     NameSurname = name + " " + surname,
-                    Email = name + "." + surname + "@gmail.com",
+                    Email = name.ToLower() + "." + surname.ToLower() + "@gmail.com",
                     Age = new Random().Next(0, 65)
                 });
             }
